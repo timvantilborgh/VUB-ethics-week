@@ -7,25 +7,193 @@ format:
   revealjs:
     logo: "images/logo.png"
     footer: "Open Science and Reproducible Research"
+    theme: [default, vub.scss]
+    slide-number: true
 ---
 
-## Quarto
+## Materials
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+- All materials can be downloaded from Github: 
 
-## Bullets
+##  {background-color="white" background-image="images/meme1.jpg" background-size="50%"}
 
-When you click the **Render** button a document will be generated that includes:
+##  {background-color="white" background-image="images/meme2.png" background-size="60%"}
 
--   Content authored with markdown
--   Output from executable code
+## A personal note: My first year as a PhD student
 
-## Code
+::: incremental
+-   I was (somewhat) trained in statistics and research methods, but not in how I should be managing and organizing a research project
+-   I used SPSS and MS Word
+-   Rerunning an analysis was a nightmare
+-   Copying results from SPSS to MS Word was prone to errors
+-   Data files were not documented
+-   Folder structures grew organically
+-   File naming conventions were non-existent
+-   Knowledge about decisions that were made during research project existed solely in my mind
+:::
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+## What is reproducible research?
 
-```{r}
-1 + 1
-```
+> Research is reproducible when others can reproduce the results of a scientific study given only the original data, code, and documentation [^1]
 
+[^1]: Alston, J. M., & Rick, J. A. (2021). A beginner's guide to Conducting reproducible research. *Bulletin of the Ecological Society of America, 102*(2), 1-14.
+
+## How does it fit into open science?
+
+> "Open Science" is an umbrella term used to refer to the concepts of openness, transparency, rigour, [reproducibility]{.orange}, replicability, and accumulation of knowledge, which are considered fundamental features of science [^2]
+
+[^2]: Crüwell, S., van Doorn, J., Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., ... & Schulte-Mecklenbeck, M. (2019). Seven Easy Steps to Open Science: An Annotated Reading List. Zeitschrift für Psychologie, 227(4), 237-248.
+
+## How does it fit into open science?
+
+Open science practices[^3]:
+
+[^3]: Crüwell, S., van Doorn, J., Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., ... & Schulte-Mecklenbeck, M. (2019). Seven Easy Steps to Open Science: An Annotated Reading List. Zeitschrift für Psychologie, 227(4), 237-248.
+
+-   Open access
+-   Open data
+-   Preregistration
+-   Reproducible analyses
+-   Best practices in statistics
+-   Replications
+-   Teaching open science
+
+## Reproducability vs Replicability
+
+-   These are not the same!
+-   Replicability: Another team uses same method on new data to see if similar conclusions can be drawn
+-   Reproducability: Same or another team uses same method on same data to see if they obtain the exact same results
+
+##  {background-color="white" background-image="images/reproducible-matrix.jpg" background-size="600px"}
+
+::: aside
+Source: https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions.html
+:::
+
+## To what extent is it a problem?
+
+-   Random sample of 250 psychology articles published between 2014 and 2017 [^4]
+    -   Research materials availability: 14%
+    -   Protocol availability: 0%
+    -   Data availability: 2%
+    -   Analysis-script availability: 1%
+
+[^4]: Hardwicke, T. E., Thibault, R. T., Kosie, J. E., Wallach, J. D., Kidwell, M. C., & Ioannidis, J. P. (2022). Estimating the prevalence of transparency and reproducibility-related research practices in psychology (2014--2017). *Perspectives on Psychological Science, 17*(1), 239-251.
+
+## To what extent is it a problem?
+
+-   232 key statistical claims from 46 published articles tested using the raw data and following the methods section closely [^5]:
+    -   70% of claims could be successfully reproduced
+    -   7% of claims were no longer statistically significant
+
+[^5]: Artner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., & Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. *Psychological Methods, 26*(5), 527.
+
+## To what extent is it a problem?
+
+-   These problems are not limited to psychology
+    -   Economics: problems in 29 out of 67 articles [^6]
+    -   Genetics: problems in 10 out of 18 articles [^7]
+    -   Political science: problems in 20 out of 24 articles [^8]
+
+[^6]: Chang, A., & Li, P. (2015). *Is economics research replicable? sixty published articles from thirteen journals say 'usually not'*. Board of Governors of the Federal Reserve System Finance and Economics.
+
+[^7]: Ioannidis, J. P., Allison, D. B., Ball, C. A., Coulibaly, I., Cui, X., Culhane, A. C., Falchi, M., Furlanello, C., Game, L., Jurman, G., Mangion, J., Mehta, T., Nitzberg, M., Page, G. P., Petretto, E., & van Noort, V. (2009). Repeatability of published microarray gene expression analyses. *Nature Genetics, 41*(2), 149--155.
+
+[^8]: Eubank, N. (2016). Lessons from a decade of replications at the quarterly journal of political science. *Political Science & Politics, 49*(2), 273--276.
+
+## To what extent is it a problem?
+
+![](images/open.jpeg){fig-align="center"}
+
+::: aside
+Nosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber, A., ... & Vazire, S. (2022). Replicability, robustness, and reproducibility in psychological science. *Annual review of psychology, 73*, 719-748.
+:::
+
+## How can we make our research reproducible?
+
+-   Open materials allow us to test reproducability [^9]
+
+[^9]: Artner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., & Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. *Psychological Methods, 26*(5), 527.
+
+![](images/vagueness.png){fig-align="center"}
+
+## How can we make our research reproducible?
+
+-   Share data
+-   Share analysis scripts
+-   Use and share lab notebooks
+-   Write and share dynamic reports that integrate text and analyses
+
+## What are the benefits?
+
+-   Clear log of all steps taken in the research process
+-   Easy to update analyses, reuse materials, and save time
+-   Signals rigor, transparency, and trustworthiness
+-   Increases citation rate
+-   Allows others to learn from your work
+-   Simplifies follow-up research
+-   Prevents mistakes from compounding over time
+
+::: aside
+Alston, J. M., & Rick, J. A. (2021). A beginner's guide to Conducting reproducible research. *Bulletin of the Ecological Society of America, 102*(2), 1-14.
+:::
+
+## So why aren't we all doing this?
+
+![](images/sharing.jpeg){fig-align="center" width="60%"} 
+
+::: aside 
+Gomes, D. G., Pottier, P., Crystal-Ornelas, R., Hudgins, E. J., Foroughirad, V., Sánchez-Reyes, L. L., ... & Gaynor, K. M. (2022). Why don't we share data and code? Perceived barriers and benefits to public archiving practices. *Proceedings of the Royal Society B, 289*(1987), 20221113. 
+:::
+
+## What tools can we use?
+
+-   Rmarkdown
+-   Quarto
+-   R packages (e.g., worcs, papaja)
+-   Repositories (e.g., OSF, Zenodo, Github)
+-   Version control (e.g., Github)
+
+## A quick example using papaja
+
+[https://github.com/crsh/papaja/tree/main/inst/example](https://github.com/crsh/papaja/tree/main/inst/example)
+
+![](images/github.png){fig-align="center"}
+
+## Limitations
+
+-   Collaboration can be difficult when co-authors are not familiar with tools
+-   Conversion to pdf works better than conversion to word (Quarto solves this problem)
+-   Long-term computational reproducability can be an issue
+-   There are situations where a simple word document is easier than an Rmarkdown or Quarto file
+-   There is a learning curve
+
+## Conclusions: policy perspective
+
+![](images/policy.jpeg){fig-align="center" width="60%"}
+
+::: aside
+Nosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber, A., ... & Vazire, S. (2022). Replicability, robustness, and reproducibility in psychological science. *Annual review of psychology, 73*, 719-748.
+:::
+
+## Conclusions: personal note
+
+::: incremental
+-   Is my workflow ideal and error-proof now that I apply these practices?
+-   Is my research reproducible?
+-   Personal benefits:
+    -   Saving time
+    -   Community
+    -   My future self is happy with my present self
+:::
+
+## {.title-slide-final background-color="#003399"}
+
+### Thank you
+
+Email: tim.vantilborgh@vub.be
+
+Twitter : @TimVantilborgh
+
+Mastodon: @TimVantilborgh@scicomm.xyz
 

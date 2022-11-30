@@ -1,0 +1,52 @@
+/*-- scss:defaults --*/
+$theme-white: #FFFFFF;
+$theme-black: #000000;
+$theme-orange: #FF6600;
+$theme-blue: #003399;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+$body-bg: $theme-white;
+$body-color: $theme-black;
+$link-color: $theme-orange;
+$presentation-heading-color: $theme-blue;
+
+$font-family-sans-serif: 'Roboto', sans-serif;
+$presentation-heading-font: 'Roboto Condensed', serif;
+
+$presentation-font-size-root: 30px;
+
+
+/*-- scss:rules --*/
+.blue {
+  color: $theme-blue;
+  font-weight: bold;
+}
+
+.orange {
+  color: $theme-orange;
+  font-weight: bold;
+}
+
+.reveal .slide a {
+  text-decoration: underline;
+}
+
+.reveal .slide-logo {
+  display: block;
+  position: fixed;
+  bottom: unset !important;
+  right: unset !important;
+  top: 5px;
+  left: 12px;
+  height: 100px !important;
+  width: 100x !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+.title-slide-final {
+  text-align: center;
+  padding-top: 250px;
+  color: $theme-white;
+}
