@@ -7,7 +7,7 @@
 <link href="slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="slides_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.1.189">
 
   <meta name="author" content="Tim Vantilborgh">
   <meta name="dcterms.date" content="2022-09-12">
@@ -20,10 +20,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -326,62 +331,61 @@
   <p class="date">09/12/2022</p>
 </section>
 
+<section id="materials" class="slide level2">
+<h2>Materials</h2>
+<ul>
+<li>All materials can be downloaded from Github: <a href="https://github.com/timvantilborgh/VUB-ethics-week">https://github.com/timvantilborgh/VUB-ethics-week</a></li>
+<li>Direct link to slides: <a href="https://timvantilborgh.github.io/VUB-ethics-week/slides.html#/title-slide">https://timvantilborgh.github.io/VUB-ethics-week/slides.html#/title-slide</a></li>
+</ul>
+
+<img data-src="images/QR.png" class="r-stretch quarto-figure-center"></section>
 <section id="section" class="slide level2" data-background-color="white" data-background-image="images/meme1.jpg" data-background-size="50%">
 <h2></h2>
 </section>
 <section id="section-1" class="slide level2" data-background-color="white" data-background-image="images/meme2.png" data-background-size="60%">
 <h2></h2>
-</section>
-<section id="a-personal-note-my-first-year-as-a-phd-student" class="slide level2">
-<h2>A personal note: My first year as a PhD student</h2>
-<div>
+<aside class="notes">
 <ul>
-<li class="fragment">I was (somewhat) trained in statistics and research methods, but not in how I should be managing and organizing a research project</li>
-<li class="fragment">I used SPSS and MS Word</li>
-<li class="fragment">Rerunning an analysis was a nightmare</li>
-<li class="fragment">Copying results from SPSS to MS Word was prone to errors</li>
-<li class="fragment">Data files were not documented</li>
-<li class="fragment">Folder structures grew organically</li>
-<li class="fragment">File naming conventions were non-existent</li>
-<li class="fragment">Knowledge about decisions that were made during research project existed solely in my mind</li>
+<li>I was (somewhat) trained in statistics and research methods, but not in how I should be managing and organizing a research project</li>
+<li>I used SPSS and MS Word</li>
+<li>Rerunning an analysis was a nightmare</li>
+<li>Copying results from SPSS to MS Word was prone to errors</li>
+<li>Data files were not documented</li>
+<li>Folder structures grew organically</li>
+<li>File naming conventions were non-existent</li>
+<li>Knowledge about decisions that were made during research project existed solely in my mind</li>
 </ul>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="what-is-reproducible-research" class="slide level2">
 <h2>What is reproducible research?</h2>
 <blockquote>
 <p>Research is reproducible when others can reproduce the results of a scientific study given only the original data, code, and documentation <sup>1</sup></p>
 </blockquote>
-<aside><ol class="aside-footnotes"><li id="fn1" role="doc-endnote"><p>Alston, J. M., &amp; Rick, J. A. (2021). A beginner’s guide to Conducting reproducible research. <em>Bulletin of the Ecological Society of America, 102</em>(2), 1-14.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Alston, J. M., &amp; Rick, J. A. (2021). A beginner’s guide to Conducting reproducible research. <em>Bulletin of the Ecological Society of America, 102</em>(2), 1-14.</p></li></ol></aside></section>
 <section id="how-does-it-fit-into-open-science" class="slide level2">
 <h2>How does it fit into open science?</h2>
 <blockquote>
 <p>“Open Science” is an umbrella term used to refer to the concepts of openness, transparency, rigour, <span class="orange">reproducibility</span>, replicability, and accumulation of knowledge, which are considered fundamental features of science <sup>1</sup></p>
 </blockquote>
-<aside><ol class="aside-footnotes"><li id="fn2" role="doc-endnote"><p>Crüwell, S., van Doorn, J., Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., … &amp; Schulte-Mecklenbeck, M. (2019). Seven Easy Steps to Open Science: An Annotated Reading List. Zeitschrift für Psychologie, 227(4), 237-248.</p></li></ol></aside></section>
-<section id="how-does-it-fit-into-open-science-1" class="slide level2">
-<h2>How does it fit into open science?</h2>
-<p>Open science practices<sup>1</sup>:</p>
-<ul>
-<li>Open access</li>
-<li>Open data</li>
-<li>Preregistration</li>
-<li>Reproducible analyses</li>
-<li>Best practices in statistics</li>
-<li>Replications</li>
-<li>Teaching open science</li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn3" role="doc-endnote"><p>Crüwell, S., van Doorn, J., Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., … &amp; Schulte-Mecklenbeck, M. (2019). Seven Easy Steps to Open Science: An Annotated Reading List. Zeitschrift für Psychologie, 227(4), 237-248.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Crüwell, S., van Doorn, J., Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., … &amp; Schulte-Mecklenbeck, M. (2019). Seven Easy Steps to Open Science: An Annotated Reading List. Zeitschrift für Psychologie, 227(4), 237-248.</p></li></ol></aside></section>
 <section id="reproducability-vs-replicability" class="slide level2">
 <h2>Reproducability vs Replicability</h2>
-<ul>
-<li>These are not the same!</li>
-<li>Replicability: Another team uses same method on new data to see if similar conclusions can be drawn</li>
-<li>Reproducability: Same or another team uses same method on same data to see if they obtain the exact same results</li>
-</ul>
-</section>
-<section id="section-2" class="slide level2" data-background-color="white" data-background-image="images/reproducible-matrix.jpg" data-background-size="600px">
-<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/reproducible-matrix.jpg"></p>
+</figure>
+</div>
 
 <aside><div>
 <p>Source: https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions.html</p>
@@ -397,7 +401,7 @@
 <li>Analysis-script availability: 1%</li>
 </ul></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn4" role="doc-endnote"><p>Hardwicke, T. E., Thibault, R. T., Kosie, J. E., Wallach, J. D., Kidwell, M. C., &amp; Ioannidis, J. P. (2022). Estimating the prevalence of transparency and reproducibility-related research practices in psychology (2014–2017). <em>Perspectives on Psychological Science, 17</em>(1), 239-251.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>Hardwicke, T. E., Thibault, R. T., Kosie, J. E., Wallach, J. D., Kidwell, M. C., &amp; Ioannidis, J. P. (2022). Estimating the prevalence of transparency and reproducibility-related research practices in psychology (2014–2017). <em>Perspectives on Psychological Science, 17</em>(1), 239-251.</p></li></ol></aside></section>
 <section id="to-what-extent-is-it-a-problem-1" class="slide level2">
 <h2>To what extent is it a problem?</h2>
 <ul>
@@ -407,7 +411,7 @@
 <li>7% of claims were no longer statistically significant</li>
 </ul></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn5" role="doc-endnote"><p>Artner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., &amp; Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. <em>Psychological Methods, 26</em>(5), 527.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>Artner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., &amp; Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. <em>Psychological Methods, 26</em>(5), 527.</p></li></ol></aside></section>
 <section id="to-what-extent-is-it-a-problem-2" class="slide level2">
 <h2>To what extent is it a problem?</h2>
 <ul>
@@ -418,7 +422,7 @@
 <li>Political science: problems in 20 out of 24 articles <sup>3</sup></li>
 </ul></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn6" role="doc-endnote"><p>Chang, A., &amp; Li, P. (2015). <em>Is economics research replicable? sixty published articles from thirteen journals say ‘usually not’</em>. Board of Governors of the Federal Reserve System Finance and Economics.</p></li><li id="fn7" role="doc-endnote"><p>Ioannidis, J. P., Allison, D. B., Ball, C. A., Coulibaly, I., Cui, X., Culhane, A. C., Falchi, M., Furlanello, C., Game, L., Jurman, G., Mangion, J., Mehta, T., Nitzberg, M., Page, G. P., Petretto, E., &amp; van Noort, V. (2009). Repeatability of published microarray gene expression analyses. <em>Nature Genetics, 41</em>(2), 149–155.</p></li><li id="fn8" role="doc-endnote"><p>Eubank, N. (2016). Lessons from a decade of replications at the quarterly journal of political science. <em>Political Science &amp; Politics, 49</em>(2), 273–276.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn5"><p>Chang, A., &amp; Li, P. (2015). <em>Is economics research replicable? sixty published articles from thirteen journals say ‘usually not’</em>. Board of Governors of the Federal Reserve System Finance and Economics.</p></li><li id="fn6"><p>Ioannidis, J. P., Allison, D. B., Ball, C. A., Coulibaly, I., Cui, X., Culhane, A. C., Falchi, M., Furlanello, C., Game, L., Jurman, G., Mangion, J., Mehta, T., Nitzberg, M., Page, G. P., Petretto, E., &amp; van Noort, V. (2009). Repeatability of published microarray gene expression analyses. <em>Nature Genetics, 41</em>(2), 149–155.</p></li><li id="fn7"><p>Eubank, N. (2016). Lessons from a decade of replications at the quarterly journal of political science. <em>Political Science &amp; Politics, 49</em>(2), 273–276.</p></li></ol></aside></section>
 <section id="to-what-extent-is-it-a-problem-3" class="slide level2">
 <h2>To what extent is it a problem?</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -440,14 +444,14 @@
 <p><img data-src="images/vagueness.png"></p>
 </figure>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn9" role="doc-endnote"><p>Artner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., &amp; Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. <em>Psychological Methods, 26</em>(5), 527.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn8"><p>Artner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., &amp; Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. <em>Psychological Methods, 26</em>(5), 527.</p></li></ol></aside></section>
 <section id="how-can-we-make-our-research-reproducible-1" class="slide level2">
 <h2>How can we make our research reproducible?</h2>
 <ul>
 <li>Share data</li>
 <li>Share analysis scripts</li>
 <li>Use and share lab notebooks</li>
-<li>Write and share dynamic reports that integrate text and analyses</li>
+<li>Write and share <span class="orange">dynamic reports</span> that integrate text and analyses</li>
 </ul>
 </section>
 <section id="what-are-the-benefits" class="slide level2">
@@ -478,9 +482,13 @@
 </div></aside></section>
 <section id="what-tools-can-we-use" class="slide level2">
 <h2>What tools can we use?</h2>
+<p>Main tools:</p>
 <ul>
 <li>Rmarkdown</li>
 <li>Quarto</li>
+</ul>
+<p>Supporting tools:</p>
+<ul>
 <li>R packages (e.g., worcs, papaja)</li>
 <li>Repositories (e.g., OSF, Zenodo, Github)</li>
 <li>Version control (e.g., Github)</li>
@@ -498,11 +506,11 @@
 <li>Conversion to pdf works better than conversion to word (Quarto solves this problem)</li>
 <li>Long-term computational reproducability can be an issue</li>
 <li>There are situations where a simple word document is easier than an Rmarkdown or Quarto file</li>
-<li>There is a learning curve</li>
+<li>There is a learning curve; we should train people early on in their research career!</li>
 </ul>
 </section>
-<section id="conclusions-policy-perspective" class="slide level2">
-<h2>Conclusions: policy perspective</h2>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/policy.jpeg" style="width:60.0%"></p>
@@ -512,22 +520,7 @@
 <aside><div>
 <p>Nosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber, A., … &amp; Vazire, S. (2022). Replicability, robustness, and reproducibility in psychological science. <em>Annual review of psychology, 73</em>, 719-748.</p>
 </div></aside></section>
-<section id="conclusions-personal-note" class="slide level2">
-<h2>Conclusions: personal note</h2>
-<div>
-<ul>
-<li class="fragment">Is my workflow ideal and error-proof now that I apply these practices?</li>
-<li class="fragment">Is my research reproducible?</li>
-<li class="fragment">Personal benefits:
-<ul>
-<li class="fragment">Saving time</li>
-<li class="fragment">Community</li>
-<li class="fragment">My future self is happy with my present self</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="section-3" class="slide level2 title-slide-final" data-background-color="#003399">
+<section id="section-2" class="slide level2 title-slide-final" data-background-color="#003399">
 <h2></h2>
 <h3 id="thank-you">Thank you</h3>
 <p>Email: tim.vantilborgh@vub.be</p>
@@ -818,7 +811,8 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);

@@ -13,15 +13,16 @@ format:
 
 ## Materials
 
-- All materials can be downloaded from Github: 
+- All materials can be downloaded from Github: [https://github.com/timvantilborgh/VUB-ethics-week](https://github.com/timvantilborgh/VUB-ethics-week)
+- Direct link to slides: [https://timvantilborgh.github.io/VUB-ethics-week/slides.html#/title-slide](https://timvantilborgh.github.io/VUB-ethics-week/slides.html#/title-slide)
+
+![](images/QR.png){fig-align="center"}
 
 ##  {background-color="white" background-image="images/meme1.jpg" background-size="50%"}
 
 ##  {background-color="white" background-image="images/meme2.png" background-size="60%"}
 
-## A personal note: My first year as a PhD student
-
-::: incremental
+::: {.notes}
 -   I was (somewhat) trained in statistics and research methods, but not in how I should be managing and organizing a research project
 -   I used SPSS and MS Word
 -   Rerunning an analysis was a nightmare
@@ -44,27 +45,9 @@ format:
 
 [^2]: Crüwell, S., van Doorn, J., Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., ... & Schulte-Mecklenbeck, M. (2019). Seven Easy Steps to Open Science: An Annotated Reading List. Zeitschrift für Psychologie, 227(4), 237-248.
 
-## How does it fit into open science?
-
-Open science practices[^3]:
-
-[^3]: Crüwell, S., van Doorn, J., Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., ... & Schulte-Mecklenbeck, M. (2019). Seven Easy Steps to Open Science: An Annotated Reading List. Zeitschrift für Psychologie, 227(4), 237-248.
-
--   Open access
--   Open data
--   Preregistration
--   Reproducible analyses
--   Best practices in statistics
--   Replications
--   Teaching open science
-
 ## Reproducability vs Replicability
 
--   These are not the same!
--   Replicability: Another team uses same method on new data to see if similar conclusions can be drawn
--   Reproducability: Same or another team uses same method on same data to see if they obtain the exact same results
-
-##  {background-color="white" background-image="images/reproducible-matrix.jpg" background-size="600px"}
+![](images/reproducible-matrix.jpg){fig-align="center"}
 
 ::: aside
 Source: https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions.html
@@ -122,7 +105,7 @@ Nosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber,
 -   Share data
 -   Share analysis scripts
 -   Use and share lab notebooks
--   Write and share dynamic reports that integrate text and analyses
+-   Write and share [dynamic reports]{.orange} that integrate text and analyses
 
 ## What are the benefits?
 
@@ -148,8 +131,14 @@ Gomes, D. G., Pottier, P., Crystal-Ornelas, R., Hudgins, E. J., Foroughirad, V.,
 
 ## What tools can we use?
 
+Main tools:
+
 -   Rmarkdown
 -   Quarto
+
+
+Supporting tools:
+
 -   R packages (e.g., worcs, papaja)
 -   Repositories (e.g., OSF, Zenodo, Github)
 -   Version control (e.g., Github)
@@ -166,25 +155,14 @@ Gomes, D. G., Pottier, P., Crystal-Ornelas, R., Hudgins, E. J., Foroughirad, V.,
 -   Conversion to pdf works better than conversion to word (Quarto solves this problem)
 -   Long-term computational reproducability can be an issue
 -   There are situations where a simple word document is easier than an Rmarkdown or Quarto file
--   There is a learning curve
+-   There is a learning curve; we should train people early on in their research career!
 
-## Conclusions: policy perspective
+## Conclusion
 
 ![](images/policy.jpeg){fig-align="center" width="60%"}
 
 ::: aside
 Nosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber, A., ... & Vazire, S. (2022). Replicability, robustness, and reproducibility in psychological science. *Annual review of psychology, 73*, 719-748.
-:::
-
-## Conclusions: personal note
-
-::: incremental
--   Is my workflow ideal and error-proof now that I apply these practices?
--   Is my research reproducible?
--   Personal benefits:
-    -   Saving time
-    -   Community
-    -   My future self is happy with my present self
 :::
 
 ## {.title-slide-final background-color="#003399"}
