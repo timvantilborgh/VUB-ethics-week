@@ -13,16 +13,29 @@ format:
 
 ## Materials
 
-- All materials can be downloaded from Github: [https://github.com/timvantilborgh/VUB-ethics-week](https://github.com/timvantilborgh/VUB-ethics-week)
-- Direct link to slides: [https://timvantilborgh.github.io/VUB-ethics-week/slides.html#/title-slide](https://timvantilborgh.github.io/VUB-ethics-week/slides.html#/title-slide)
+-   All materials can be downloaded from Github: <https://github.com/timvantilborgh/VUB-ethics-week>
+-   Direct link to slides: <https://timvantilborgh.github.io/VUB-ethics-week/slides.html#/title-slide>
 
-![](images/QR.png){fig-align="center"}
+```{r}
+#| echo: false
+#| warning: false
+#| error: false
+
+# Load libraries
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(qrcode)
+
+# Generate QR code
+code <- qr_code("https://timvantilborgh.github.io/VUB-ethics-week/slides.html#/title-slide")
+
+plot(code)
+```
 
 ##  {background-color="white" background-image="images/meme1.jpg" background-size="50%"}
 
 ##  {background-color="white" background-image="images/meme2.png" background-size="60%"}
 
-::: {.notes}
+::: notes
 -   I was (somewhat) trained in statistics and research methods, but not in how I should be managing and organizing a research project
 -   I used SPSS and MS Word
 -   Rerunning an analysis was a nightmare
@@ -55,34 +68,34 @@ Source: https://the-turing-way.netlify.app/reproducible-research/overview/overvi
 
 ## To what extent is it a problem?
 
--   Random sample of 250 psychology articles published between 2014 and 2017 [^4]
+-   Random sample of 250 psychology articles published between 2014 and 2017 [^3]
     -   Research materials availability: 14%
     -   Protocol availability: 0%
     -   Data availability: 2%
     -   Analysis-script availability: 1%
 
-[^4]: Hardwicke, T. E., Thibault, R. T., Kosie, J. E., Wallach, J. D., Kidwell, M. C., & Ioannidis, J. P. (2022). Estimating the prevalence of transparency and reproducibility-related research practices in psychology (2014--2017). *Perspectives on Psychological Science, 17*(1), 239-251.
+[^3]: Hardwicke, T. E., Thibault, R. T., Kosie, J. E., Wallach, J. D., Kidwell, M. C., & Ioannidis, J. P. (2022). Estimating the prevalence of transparency and reproducibility-related research practices in psychology (2014--2017). *Perspectives on Psychological Science, 17*(1), 239-251.
 
 ## To what extent is it a problem?
 
--   232 key statistical claims from 46 published articles tested using the raw data and following the methods section closely [^5]:
+-   232 key statistical claims from 46 published articles tested using the raw data and following the methods section closely [^4]:
     -   70% of claims could be successfully reproduced
     -   7% of claims were no longer statistically significant
 
-[^5]: Artner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., & Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. *Psychological Methods, 26*(5), 527.
+[^4]: Artner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., & Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. *Psychological Methods, 26*(5), 527.
 
 ## To what extent is it a problem?
 
 -   These problems are not limited to psychology
-    -   Economics: problems in 29 out of 67 articles [^6]
-    -   Genetics: problems in 10 out of 18 articles [^7]
-    -   Political science: problems in 20 out of 24 articles [^8]
+    -   Economics: problems in 29 out of 67 articles [^5]
+    -   Genetics: problems in 10 out of 18 articles [^6]
+    -   Political science: problems in 20 out of 24 articles [^7]
 
-[^6]: Chang, A., & Li, P. (2015). *Is economics research replicable? sixty published articles from thirteen journals say 'usually not'*. Board of Governors of the Federal Reserve System Finance and Economics.
+[^5]: Chang, A., & Li, P. (2015). *Is economics research replicable? sixty published articles from thirteen journals say 'usually not'*. Board of Governors of the Federal Reserve System Finance and Economics.
 
-[^7]: Ioannidis, J. P., Allison, D. B., Ball, C. A., Coulibaly, I., Cui, X., Culhane, A. C., Falchi, M., Furlanello, C., Game, L., Jurman, G., Mangion, J., Mehta, T., Nitzberg, M., Page, G. P., Petretto, E., & van Noort, V. (2009). Repeatability of published microarray gene expression analyses. *Nature Genetics, 41*(2), 149--155.
+[^6]: Ioannidis, J. P., Allison, D. B., Ball, C. A., Coulibaly, I., Cui, X., Culhane, A. C., Falchi, M., Furlanello, C., Game, L., Jurman, G., Mangion, J., Mehta, T., Nitzberg, M., Page, G. P., Petretto, E., & van Noort, V. (2009). Repeatability of published microarray gene expression analyses. *Nature Genetics, 41*(2), 149--155.
 
-[^8]: Eubank, N. (2016). Lessons from a decade of replications at the quarterly journal of political science. *Political Science & Politics, 49*(2), 273--276.
+[^7]: Eubank, N. (2016). Lessons from a decade of replications at the quarterly journal of political science. *Political Science & Politics, 49*(2), 273--276.
 
 ## To what extent is it a problem?
 
@@ -94,9 +107,9 @@ Nosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber,
 
 ## How can we make our research reproducible?
 
--   Open materials allow us to test reproducability [^9]
+-   Open materials allow us to test reproducability [^8]
 
-[^9]: Artner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., & Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. *Psychological Methods, 26*(5), 527.
+[^8]: Artner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., & Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. *Psychological Methods, 26*(5), 527.
 
 ![](images/vagueness.png){fig-align="center"}
 
@@ -105,55 +118,68 @@ Nosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber,
 -   Share data
 -   Share analysis scripts
 -   Use and share lab notebooks
--   Write and share [dynamic reports]{.orange} that integrate text and analyses
+-   Reproducible workflow with [dynamic documents]{.orange}
 
-## What are the benefits?
+## Reproducible workflow
 
--   Clear log of all steps taken in the research process
--   Easy to update analyses, reuse materials, and save time
--   Signals rigor, transparency, and trustworthiness
--   Increases citation rate
--   Allows others to learn from your work
--   Simplifies follow-up research
--   Prevents mistakes from compounding over time
+![](images/workflow.png){fig-align="center" width="70%"}
 
 ::: aside
-Alston, J. M., & Rick, J. A. (2021). A beginner's guide to Conducting reproducible research. *Bulletin of the Ecological Society of America, 102*(2), 1-14.
+Peikert, A., & Brandmeier, A. M. (2021). A reproducible data analysis workflow with R markdown, Git, Make, and Docker. *Quantitative and Computational Methods in Behavioral Sciences*, 1-27.
 :::
 
-## So why aren't we all doing this?
+## Version control
 
-![](images/sharing.jpeg){fig-align="center" width="60%"} 
+-   Track changes to files
+-   Ability to recall specific versions of files or revert entire project to a past state
+-   Tools: GitHub, Gitlab
+-   Ability to collaborate and share files
 
-::: aside 
-Gomes, D. G., Pottier, P., Crystal-Ornelas, R., Hudgins, E. J., Foroughirad, V., Sánchez-Reyes, L. L., ... & Gaynor, K. M. (2022). Why don't we share data and code? Perceived barriers and benefits to public archiving practices. *Proceedings of the Royal Society B, 289*(1987), 20221113. 
+## Dependency management
+
+-   In what sequence should files be executed?
+-   Tools: Make, Targets, Drake
+
+![](images/targets.png){width="60%"}
+
+## Dynamic document generation
+
+:::{layout-ncol=2}
+![](images/dynamicdoc1.png){width="40%"}
+
+![](images/dynamicdoc2.png){width="40%"}
 :::
 
-## What tools can we use?
+::: aside
+Peikert, A., & Brandmeier, A. M. (2021). A reproducible data analysis workflow with R markdown, Git, Make, and Docker. *Quantitative and Computational Methods in Behavioral Sciences*, 1-27.
+:::
 
-Main tools:
+## Dynamic document generation: Papaja
 
--   Rmarkdown
--   Quarto
-
-
-Supporting tools:
-
--   R packages (e.g., worcs, papaja)
--   Repositories (e.g., OSF, Zenodo, Github)
--   Version control (e.g., Github)
-
-## A quick example using papaja
-
-[https://github.com/crsh/papaja/tree/main/inst/example](https://github.com/crsh/papaja/tree/main/inst/example)
+<https://github.com/crsh/papaja/tree/main/inst/example>
 
 ![](images/github.png){fig-align="center"}
 
+## Containerization
+
+-   Software, R packages, operating systems are commonly updated
+-   Code may no longer run due to updates
+-   Tools: Docker, renv, liftR, holepunch
+-   Encapsulate, share, and re-create computational environment
+-   Save versions of R packages, R, operating systems, etcetera
+
+## So why aren't we all doing this?
+
+![](images/sharing.jpeg){fig-align="center" width="60%"}
+
+::: aside
+Gomes, D. G., Pottier, P., Crystal-Ornelas, R., Hudgins, E. J., Foroughirad, V., Sánchez-Reyes, L. L., ... & Gaynor, K. M. (2022). Why don't we share data and code? Perceived barriers and benefits to public archiving practices. *Proceedings of the Royal Society B, 289*(1987), 20221113.
+:::
+
 ## Limitations
 
--   Collaboration can be difficult when co-authors are not familiar with tools
+-   Collaboration can be difficult when co-authors are not familiar with tools (redoc package!)
 -   Conversion to pdf works better than conversion to word (Quarto solves this problem)
--   Long-term computational reproducability can be an issue
 -   There are situations where a simple word document is easier than an Rmarkdown or Quarto file
 -   There is a learning curve; we should train people early on in their research career!
 
@@ -165,13 +191,12 @@ Supporting tools:
 Nosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber, A., ... & Vazire, S. (2022). Replicability, robustness, and reproducibility in psychological science. *Annual review of psychology, 73*, 719-748.
 :::
 
-## {.title-slide-final background-color="#003399"}
+##  {.title-slide-final background-color="#003399"}
 
 ### Thank you
 
-Email: tim.vantilborgh@vub.be
+Email: tim.vantilborgh\@vub.be
 
 Twitter : @TimVantilborgh
 
 Mastodon: @TimVantilborgh@scicomm.xyz
-

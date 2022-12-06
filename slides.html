@@ -334,11 +334,11 @@
 <section id="materials" class="slide level2">
 <h2>Materials</h2>
 <ul>
-<li>All materials can be downloaded from Github: <a href="https://github.com/timvantilborgh/VUB-ethics-week">https://github.com/timvantilborgh/VUB-ethics-week</a></li>
-<li>Direct link to slides: <a href="https://timvantilborgh.github.io/VUB-ethics-week/slides.html#/title-slide">https://timvantilborgh.github.io/VUB-ethics-week/slides.html#/title-slide</a></li>
+<li>All materials can be downloaded from Github: <a href="https://github.com/timvantilborgh/VUB-ethics-week" class="uri">https://github.com/timvantilborgh/VUB-ethics-week</a></li>
+<li>Direct link to slides: <a href="https://timvantilborgh.github.io/VUB-ethics-week/slides.html#/title-slide" class="uri">https://timvantilborgh.github.io/VUB-ethics-week/slides.html#/title-slide</a></li>
 </ul>
 
-<img data-src="images/QR.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
 <section id="section" class="slide level2" data-background-color="white" data-background-image="images/meme1.jpg" data-background-size="50%">
 <h2></h2>
 </section>
@@ -451,24 +451,68 @@
 <li>Share data</li>
 <li>Share analysis scripts</li>
 <li>Use and share lab notebooks</li>
-<li>Write and share <span class="orange">dynamic reports</span> that integrate text and analyses</li>
+<li>Reproducible workflow with <span class="orange">dynamic documents</span></li>
 </ul>
 </section>
-<section id="what-are-the-benefits" class="slide level2">
-<h2>What are the benefits?</h2>
-<ul>
-<li>Clear log of all steps taken in the research process</li>
-<li>Easy to update analyses, reuse materials, and save time</li>
-<li>Signals rigor, transparency, and trustworthiness</li>
-<li>Increases citation rate</li>
-<li>Allows others to learn from your work</li>
-<li>Simplifies follow-up research</li>
-<li>Prevents mistakes from compounding over time</li>
-</ul>
+<section id="reproducible-workflow" class="slide level2">
+<h2>Reproducible workflow</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/workflow.png" style="width:70.0%"></p>
+</figure>
+</div>
 
 <aside><div>
-<p>Alston, J. M., &amp; Rick, J. A. (2021). A beginner’s guide to Conducting reproducible research. <em>Bulletin of the Ecological Society of America, 102</em>(2), 1-14.</p>
+<p>Peikert, A., &amp; Brandmeier, A. M. (2021). A reproducible data analysis workflow with R markdown, Git, Make, and Docker. <em>Quantitative and Computational Methods in Behavioral Sciences</em>, 1-27.</p>
 </div></aside></section>
+<section id="version-control" class="slide level2">
+<h2>Version control</h2>
+<ul>
+<li>Track changes to files</li>
+<li>Ability to recall specific versions of files or revert entire project to a past state</li>
+<li>Tools: GitHub, Gitlab</li>
+<li>Ability to collaborate and share files</li>
+</ul>
+</section>
+<section id="dependency-management" class="slide level2">
+<h2>Dependency management</h2>
+<ul>
+<li>In what sequence should files be executed?</li>
+<li>Tools: Make, Targets, Drake</li>
+</ul>
+
+<img data-src="images/targets.png" style="width:60.0%" class="r-stretch"></section>
+<section id="dynamic-document-generation" class="slide level2">
+<h2>Dynamic document generation</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/dynamicdoc1.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/dynamicdoc2.png"></p>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Peikert, A., &amp; Brandmeier, A. M. (2021). A reproducible data analysis workflow with R markdown, Git, Make, and Docker. <em>Quantitative and Computational Methods in Behavioral Sciences</em>, 1-27.</p>
+</div></aside></section>
+<section id="dynamic-document-generation-papaja" class="slide level2">
+<h2>Dynamic document generation: Papaja</h2>
+<p><a href="https://github.com/crsh/papaja/tree/main/inst/example" class="uri">https://github.com/crsh/papaja/tree/main/inst/example</a></p>
+
+<img data-src="images/github.png" class="r-stretch quarto-figure-center"></section>
+<section id="containerization" class="slide level2">
+<h2>Containerization</h2>
+<ul>
+<li>Software, R packages, operating systems are commonly updated</li>
+<li>Code may no longer run due to updates</li>
+<li>Tools: Docker, renv, liftR, holepunch</li>
+<li>Encapsulate, share, and re-create computational environment</li>
+<li>Save versions of R packages, R, operating systems, etcetera</li>
+</ul>
+</section>
 <section id="so-why-arent-we-all-doing-this" class="slide level2">
 <h2>So why aren’t we all doing this?</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -480,31 +524,11 @@
 <aside><div>
 <p>Gomes, D. G., Pottier, P., Crystal-Ornelas, R., Hudgins, E. J., Foroughirad, V., Sánchez-Reyes, L. L., … &amp; Gaynor, K. M. (2022). Why don’t we share data and code? Perceived barriers and benefits to public archiving practices. <em>Proceedings of the Royal Society B, 289</em>(1987), 20221113.</p>
 </div></aside></section>
-<section id="what-tools-can-we-use" class="slide level2">
-<h2>What tools can we use?</h2>
-<p>Main tools:</p>
-<ul>
-<li>Rmarkdown</li>
-<li>Quarto</li>
-</ul>
-<p>Supporting tools:</p>
-<ul>
-<li>R packages (e.g., worcs, papaja)</li>
-<li>Repositories (e.g., OSF, Zenodo, Github)</li>
-<li>Version control (e.g., Github)</li>
-</ul>
-</section>
-<section id="a-quick-example-using-papaja" class="slide level2">
-<h2>A quick example using papaja</h2>
-<p><a href="https://github.com/crsh/papaja/tree/main/inst/example">https://github.com/crsh/papaja/tree/main/inst/example</a></p>
-
-<img data-src="images/github.png" class="r-stretch quarto-figure-center"></section>
 <section id="limitations" class="slide level2">
 <h2>Limitations</h2>
 <ul>
-<li>Collaboration can be difficult when co-authors are not familiar with tools</li>
+<li>Collaboration can be difficult when co-authors are not familiar with tools (redoc package!)</li>
 <li>Conversion to pdf works better than conversion to word (Quarto solves this problem)</li>
-<li>Long-term computational reproducability can be an issue</li>
 <li>There are situations where a simple word document is easier than an Rmarkdown or Quarto file</li>
 <li>There is a learning curve; we should train people early on in their research career!</li>
 </ul>
@@ -743,6 +767,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
